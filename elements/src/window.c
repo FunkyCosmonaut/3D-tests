@@ -1,10 +1,3 @@
-/*#define GLFW_INCLUDE_NONE
-#include <stdio.h>
-#include <stdlib.h>
-//#include <GLES3/gl3.h>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-*/
 #include "window.h"
 
 int main(){
@@ -47,9 +40,12 @@ int main(){
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	//*******************************************************************
 	
-	//loop
-	init();
+	//loop //Fucking Hell, days of suffering and all this time
+	//I was beating my head in because my shaders weren't loaded before setting uniforms
 	loadShaders();
+	init();
+
+
 	while(!glfwWindowShouldClose(window))
 	{
 		processInput(window);
