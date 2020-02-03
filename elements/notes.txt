@@ -1,0 +1,10 @@
+gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+gl.enableVertexAttribArray(a_positionLocation);
+gl.vertexAttribPointer(a_positionLocation, 3, gl.FLOAT, false, 0, 0);
+gl.bindBuffer(gl.ARRAY_BUFFER, texcoordBuffer);
+gl.enableVertexAttribArray(a_texcoordLocation);
+gl.vertexAttribPointer(a_texcoordLocation, 4, gl.FLOAT, false, 0, 0);
+V
+draw elements
+we prob need to do this for everything
+turn this into a function
